@@ -59,11 +59,13 @@ body._lock {
     @media screen and (max-width: 768px) {
         /* стили для средних планшетов - начало */
         max-width: 710px;
+        padding: 0px;
     }
 
     @media screen and (max-width: 480px) {
         /* стили для телефонов - начало */
         max-width: none;
+        padding: 0px;
     }
 }
 
@@ -75,6 +77,8 @@ body._lock {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
 .soc_icon {
@@ -90,18 +94,19 @@ body._lock {
     display: flex;
     flex-direction: row;
     margin-left: 40px;
+    @media screen and (max-width: 1000px) {
+        margin-left: 30px;
+    }
+    @media screen and (max-width: 768px) {
+        margin-left: 20px;
+    }
 
     @media screen and (max-width: 480px) {
         margin-left: 10px;
     }
 
-    @media screen and (max-width: 768px) {
-        margin-left: 20px;
-    }
 
-    @media screen and (max-width: 1000px) {
-        margin-left: 30px;
-    }
+
 
 
 }
@@ -113,6 +118,7 @@ body._lock {
 }
 
 .header_right_row {
+
     width: 60%;
     height: 100%;
     display: flex;
@@ -138,6 +144,7 @@ body._lock {
 
 @media screen and (max-width: 768px) {
     .menu_icon {
+        margin-left: 5px;
         z-index: 5;
         display: block;
         position: relative;
@@ -289,7 +296,11 @@ body._lock {
 
         .btn {
             width: 100%;
-            margin: 20px 0px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 25px;
+            padding-bottom: 25px;
 
             .btn-pay {
                 width: 33%;
@@ -297,7 +308,6 @@ body._lock {
             }
 
             .btn-free-demo {
-                margin: 0px 51px;
                 font-family: 'Cardo', serif;
                 font-weight: 400;
                 font-size: 19px;
@@ -305,6 +315,7 @@ body._lock {
                 background: none;
                 border: none;
                 border-bottom: 1px solid $textColorWhite;
+                align-self: center;
             }
         }
 
@@ -363,6 +374,17 @@ body._lock {
         flex-direction: column;
         .info{
             width: 90%;
+            h1{
+                font-size: 34px;
+            }
+            .btn{
+                .btn-pay{
+                    width: 47%;
+                }
+            }
+        }
+        .picture{
+            display: none;
         }
     }
 }
@@ -463,6 +485,22 @@ body._lock {
     }
 
 }
+@media screen and (max-width: 768px) {
+    .block_2{
+        .block_books{
+            flex-direction: column;
+            .book{
+                width: 90%;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+}
+
 
 .section_3 {
     background-color: $bgColorBlueLight;
@@ -491,7 +529,7 @@ body._lock {
 
     .author_info {
         width: 50%;
-        margin: 25px;
+        padding: 25px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -586,5 +624,37 @@ body._lock {
 
 
         }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .block_3{
+        flex-direction: column;
+        align-content: center;
+        .author_pic{
+            align-self: center;
+            img{
+                top: -25px;
+                left: -25px;
+            }
+        }
+        .author_info {
+            align-items: center;
+            width: 100%;
+        }
+
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .block_3{
+        .author_info {
+            .card_qr{
+                img{
+                    display: none;
+                }
+            }
+        }
+
     }
 }

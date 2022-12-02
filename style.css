@@ -45,12 +45,14 @@ body._lock {
   ._conteiner {
     /* стили для средних планшетов - начало */
     max-width: 710px;
+    padding: 0px;
   }
 }
 @media screen and (max-width: 480px) {
   ._conteiner {
     /* стили для телефонов - начало */
     max-width: none;
+    padding: 0px;
   }
 }
 
@@ -62,6 +64,8 @@ body._lock {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 .soc_icon {
@@ -78,9 +82,9 @@ body._lock {
   flex-direction: row;
   margin-left: 40px;
 }
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
   .soc_icons {
-    margin-left: 10px;
+    margin-left: 30px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -88,9 +92,9 @@ body._lock {
     margin-left: 20px;
   }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 480px) {
   .soc_icons {
-    margin-left: 30px;
+    margin-left: 10px;
   }
 }
 
@@ -121,6 +125,7 @@ body._lock {
 
 @media screen and (max-width: 768px) {
   .menu_icon {
+    margin-left: 5px;
     z-index: 5;
     display: block;
     position: relative;
@@ -251,14 +256,17 @@ body._lock {
 }
 .block_1 .info .btn {
   width: 100%;
-  margin: 20px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .block_1 .info .btn .btn-pay {
   width: 33%;
   padding: 15px;
 }
 .block_1 .info .btn .btn-free-demo {
-  margin: 0px 51px;
   font-family: "Cardo", serif;
   font-weight: 400;
   font-size: 19px;
@@ -266,6 +274,7 @@ body._lock {
   background: none;
   border: none;
   border-bottom: 1px solid #FFFFFF;
+  align-self: center;
 }
 .block_1 .info .info_book {
   width: 100%;
@@ -313,6 +322,15 @@ body._lock {
   }
   .block_1 .info {
     width: 90%;
+  }
+  .block_1 .info h1 {
+    font-size: 34px;
+  }
+  .block_1 .info .btn .btn-pay {
+    width: 47%;
+  }
+  .block_1 .picture {
+    display: none;
   }
 }
 .section_2 {
@@ -395,6 +413,14 @@ body._lock {
   margin: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .block_2 .block_books {
+    flex-direction: column;
+  }
+  .block_2 .block_books .book {
+    width: 90%;
+  }
+}
 .section_3 {
   background-color: #F5F8FC;
 }
@@ -420,7 +446,7 @@ body._lock {
 }
 .block_3 .author_info {
   width: 50%;
-  margin: 25px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -501,6 +527,29 @@ body._lock {
   font-weight: 400;
   font-size: 18px;
   color: #B4C7E7;
+}
+
+@media screen and (max-width: 768px) {
+  .block_3 {
+    flex-direction: column;
+    align-content: center;
+  }
+  .block_3 .author_pic {
+    align-self: center;
+  }
+  .block_3 .author_pic img {
+    top: -25px;
+    left: -25px;
+  }
+  .block_3 .author_info {
+    align-items: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .block_3 .author_info .card_qr img {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
